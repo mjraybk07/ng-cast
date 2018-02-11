@@ -2,9 +2,10 @@ angular.module('video-player')
 
 .component('videoList', {
 
-  controller: function(){
+  controller: function($scope){
     console.log(this)
   },
+
   bindings: {
     videos: "<"
   },

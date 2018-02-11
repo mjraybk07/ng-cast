@@ -8,6 +8,9 @@ angular.module('video-player')
     };
     this.currentVideo = window.exampleVideoData[0];
     this.videos = window.exampleVideoData;
+    this.handleClick = function(arg){
+      this.currentVideo = arg;
+    }
     //console.log(this.currentVideo)
   },
 

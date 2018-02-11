@@ -1,15 +1,14 @@
 angular.module('video-player')
 
 .component('videoPlayer', {
+
+
   controller: function(){
     console.log(this)
-    // console.log($scope)
-    // this.url = "https://www.youtube.com/embed/" + this.currentVideo.id.videoId;
-    this.test = "ttest"
-    // debugger
+    this.urlFunction = function(){
+      return "https://www.youtube.com/embed/" + this.currentVideo.id.videoId;
+    }
   },
-
-
 
   bindings: {
     currentVideo: "<"
