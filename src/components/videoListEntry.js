@@ -4,12 +4,14 @@ angular.module('video-player')
   controller: function($scope){
     console.log(this)
     this.onClick = () => {
-      $scope.$parent.$parent.$parent.$ctrl.handleClick(this.video)
+      $scope.$parent.$parent.$parent.$ctrl.click(this.video);
+      // this.handleClick(this.video)
     };
   },
 
   bindings: {
-    video: "<"
+    video: "<",
+    handleClick: "&"
   },
 
   templateUrl: 'src/templates/videoListEntry.html'

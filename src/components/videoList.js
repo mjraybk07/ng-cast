@@ -2,12 +2,13 @@ angular.module('video-player')
 
 .component('videoList', {
 
-  controller: function($scope){
-    console.log(this)
+  controller: function(){
+    console.log(this.click)
   },
 
   bindings: {
-    videos: "<"
+    videos: "<",
+    click: "&"
   },
 
   templateUrl: 'src/templates/videoList.html'
