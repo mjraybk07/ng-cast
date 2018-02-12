@@ -12,18 +12,16 @@ angular.module('video-player')
       console.log("called");
       this.currentVideo = arg;
     };
-    this.search = (query) => {
-      console.log('query: ', query);
-      // console.log(youTube)
-      youTube.sendRequest(this.handleApiRequest, 'panda')
+
+    this.search = (query='pepsi') => {
+      youTube.sendRequest(this.handleApiRequest, query)
     };
 
-    // this.$onInit = function () {
-    //    this.search('panda')
-    // }
     this.handleApiRequest = (data) => {
       this.videos = data;
-    }
+      this.currentVideo = data[0];
+    };
+
   },
 
 
